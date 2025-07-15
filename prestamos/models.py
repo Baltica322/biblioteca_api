@@ -19,7 +19,7 @@ class Prestamo(models.Model):
     def calcular_multa(self):
         if self.estado == 'activo' and timezone.now().date() > self.fecha_devolucion:
             dias_atraso = (timezone.now().date() - self.fecha_devolucion).days
-            return dias_atraso * 500  # Ejemplo: $500 por día
+            return dias_atraso * 500  
         return 0
 
     def __str__(self):

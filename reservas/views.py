@@ -8,7 +8,7 @@ from django.http import Http404
 from libros.models import Libro
 
 
-#Vista para listar y crear estudiantes
+# Vista para listar y crear estudiantes
 class ReservasList(APIView):
 
     def get(self, request):
